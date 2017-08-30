@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/custom-style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src="/js/script.js")
+  body
+   header.header
+     div.logo
+      img(src='/css/images/veteran-logo.png')
+     div.navBar
+      ul
+       li YOUR SCHOOL
+       li YOUR TERMS
+       li YOUR FUTURE
+       li BLOG
+       li ABOUT
+       button.getStarted GET STARTED
+   div.main
+    block content
+   includes/footer.pug
