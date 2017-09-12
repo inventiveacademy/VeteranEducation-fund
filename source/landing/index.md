@@ -1,5 +1,5 @@
 ---
-title: Apply For Funding
+title: Apply
 date: 
 ---
 <div id="landingHeader">
@@ -7,7 +7,7 @@ date:
 		<button id="apply">APPLY</button>
 		<ul>
 			<li><a href="">HOME</li>
-			<li><a href="">BLOG</li>
+			<li><a href="http://localhost:4000/archives">BLOG</li>
 			<li><a href="">APPLY</li>
 		</ul>
 	</div>
@@ -66,9 +66,21 @@ date:
 	</div>
 </div>
 <footer id="landingFooter">
-	<ul>
-		<li>LOAN APPLICANTS</li>
-		<li>Questions concerning your loan application? Please email LoanHelp@vetedfunding.com</li>
-	</ul>
+	<div id="footerWrapper">
+		<ul class="footerItem">
+			<li class="footerHeading">LOAN APPLICANTS</li>
+			<li>Questions concerning your loan application? Please email LoanHelp@vetedfunding.com</li>
+		</ul>
+		<ul class="footerItem">
+			<li class="footerHeading">CONTACT</li>
+			<li>Pariatur laborum ullamco commodo eiusmod sed minim in anim consequat labore reprehenderit cupidatat.</li>
+			<li>Labore reprehenderit cupidatat.</li>
+		</ul>
+		<ul class="footerItem">
+			<li class="footerHeading">SUPPORT</li>
+			<li>Pariatur laborum ullamco commodo eiusmod sed minim in anim consequat labore reprehenderit cupidatat.</li>
+			<li>Labore reprehenderit cupidatat.</li>
+		</ul>
+	</div>
 </footer>
 
