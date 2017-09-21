@@ -1,1 +1,46 @@
-extends partial/layout.pug
+extends partial/landing-layout.pug
+
+block content
+	div.landing.main
+		div.overlay
+			h2 CALLING ALL VETERANS...
+			h1 VETERAN EDUCATION FUND
+			h3 The Veteran Education fund has your six.
+			h3 Learn more and see if you qualify for educational funding.
+			button#learnMore LEARN MORE
+
+	include partial/content-card.pug
+	
+	div#cardForm
+		div#formWrapper
+			div.info
+				h1 WANT TO SEE IF YOU QUALIFY?
+				h2 IT'S FREE!
+				h3 Initial screening will not affect your credit score.
+			form(id="submitForm" action="submit")
+				div.inputLeft
+					input(class="input" type="text" id="fname" name="firstName" placeholder="First Name")
+					input(class="input" type="text" id="mname" name="middleName" placeholder="Middle Name")
+					input(class="input" type="text" id="lname" name="lastName" placeholder="Last Name")
+					input(class="input" type="text" id="email" name="email" placeholder="Email")
+				div.inputRight
+					input(class="input" type="text" id="phone" name="contactphone" placeholder="Phone")
+					input(class="input" type="text" id="address" name="address" placeholder="Address")
+					input(class="input" type="text" id="zip" name="zip" placeholder="Zip")
+					select(id="name" name="state" placeholder="State")
+						option(value="alabama") Alabama
+						option(value="alaska") Alaska
+						option(value="arizona") Arizona
+						option(value="arkansas") Arkansas
+						option(value="california") California
+						option(value="colorado") Colorado
+						option(value="connecticut") Connecticut
+						option(value="delaware") Delaware
+						option(value="florida") Florida
+						option(value="georgia") Georgia
+						option(value="hawaii") Hawaii
+						option(value="idaho") Idaho
+						option(value="illinois") Illinois
+					button#submitAppBtn APPLY FOR FREE!
+
+

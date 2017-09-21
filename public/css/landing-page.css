@@ -6,12 +6,12 @@
 	width: 100%;
 	transition: .5s;
 	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid red;
 }
 
 #apply {
-	position: absolute;
-	top: 0;
-	left: 0;
 	border: 2px solid #E8C162;
 	background: none;
 	color: #E8C162;
@@ -28,13 +28,10 @@
 }
 
 #landingHeader #landingNav ul {
-	position: absolute;
-	top: 0;
-	right: 0;
 	display: flex;
 	padding-right: 25px;
 	list-style: none;
-	margin: 30px 20px 0 0;
+	/*margin: 30px 20px 0 0;*/
 }
 
 #landingHeader #landingNav ul li a {
@@ -52,22 +49,15 @@
 }
 
 .landing {
-	position: absolute;
 	background-image: url('/images/vets-face.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	top: 0;
-	left: 0;
 	height: 800px;
 	width: 100%;
-	z-index: 4;
 	font-family: 'Lato';
 }
 
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
