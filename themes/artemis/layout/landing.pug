@@ -17,7 +17,7 @@ block content
 				h1 WANT TO SEE IF YOU QUALIFY?
 				h2 IT'S FREE!
 				h3 Initial screening will not affect your credit score.
-			form(id="submitForm" action="submit")
+			form(id="submitForm")
 				div.inputRow
 					div.inputContainer
 						label First Name
@@ -37,25 +37,71 @@ block content
 						label Address
 						input(class="input leftCol" type="text" id="address" name="address" placeholder="Address")
 					div.inputContainer
+						label City
+						input(class="input" type="text" id="city" name="city" placeholder="City")
+					div.inputContainer
 						label Zip
 						input(class="input" type="text" id="zip" name="zip" placeholder="Zip")
 				div.stateSelect
 					label State
-					select(id="name" name="state" placeholder="State")
-						option Please select a state
-						option(value="alabama") Alabama
-						option(value="alaska") Alaska
-						option(value="arizona") Arizona
-						option(value="arkansas") Arkansas
-						option(value="california") California
-						option(value="colorado") Colorado
-						option(value="connecticut") Connecticut
-						option(value="delaware") Delaware
-						option(value="florida") Florida
-						option(value="georgia") Georgia
-						option(value="hawaii") Hawaii
-						option(value="idaho") Idaho
-						option(value="illinois") Illinois
-				button#submitAppBtn APPLY FOR FREE!
+					select(id="state" name="state" placeholder="State")
+						option(id="placeholder" disabled selected) Please select a state
+						option(value="AL" required="required") AL
+						option(value="AK" required="required") AK
+						option(value="AZ" required="required") AZ
+						option(value="AR" required="required") AR
+						option(value="CA" required="required") CA
+						option(value="CO" required="required") CO
+						option(value="CT" required="required") CT
+						option(value="DE" required="required") DE
+						option(value="FL" required="required") FL
+						option(value="GA" required="required") GA
+						option(value="HI" required="required") HI
+						option(value="ID" required="required") ID
+						option(value="IL" required="required") IL
+						option(value="IN" required="required") IN
+						option(value="IA" required="required") IA
+						option(value="KS" required="required") KS
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+						option(value="IL" required="required") IL
+				button#submitAppBtn(type="submit" disabled) APPLY FOR FREE!
 
 
