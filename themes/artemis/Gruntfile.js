@@ -4,18 +4,11 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 options: {
-                    sourcemap: 'none',
-                    style: 'compressed',
+                    'style' : 'expanded'
                 },
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'source/scss',
-                        src: ['*.scss'],
-                        dest: 'source/css',
-                        ext: '.css'
-                    }
-                ]
+                files: {
+                        'source/css/theme.css' : 'source/scss/theme.scss'
+                }
             }
         },
         watch: {

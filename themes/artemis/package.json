@@ -22,8 +22,14 @@
   },
   "homepage": "https://github.com/Dreyer/hexo-theme-artemis#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-init": "^0.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch-sass": "^1.2.4"
   }
 }

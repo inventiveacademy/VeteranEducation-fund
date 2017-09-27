@@ -4,22 +4,23 @@
 	left: 0;
 	z-index: 5;
 	width: 100%;
-	transition: .5s;
-	height: 100px;
+	transition: .3s;
+	height: 70px;
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid red;
+	align-items: center;
 }
 
 #apply {
 	border: 2px solid #E8C162;
 	background: none;
 	color: #E8C162;
-	font-size: 1.5em;
-	padding: 5px 50px 5px 50px;
-	margin: 25px 0 0 20px;
+	font-size: 1.2em;
 	border-radius: 4px;
 	transition: .5s;
+	padding: 0 50px;
+	margin-left: 35px;
+	height: 50px;
 }
 
 #apply:hover {
@@ -29,15 +30,14 @@
 
 #landingHeader #landingNav ul {
 	display: flex;
-	padding-right: 25px;
+	padding-right: 35px;
 	list-style: none;
-	/*margin: 30px 20px 0 0;*/
 }
 
 #landingHeader #landingNav ul li a {
 	color: #fff;
 	font-family: "lato";
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: 300;
 	text-decoration: none;
 	padding-left: 35px;
@@ -52,7 +52,7 @@
 	background-image: url('/images/vets-face.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 800px;
+	height: 700px;
 	width: 100%;
 	font-family: 'Lato';
 }
@@ -69,27 +69,28 @@
 
 .landing h2 {
 	color: #E8C162;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: 900;
-	margin: 0 0 0 0;
-	text-shadow: 0 0 15px rgba(0, 0, 0, .7);
+	margin-bottom: 15px;
+	text-shadow: 0 0 15px rgba(0, 0, 0, .7)
 
 }
 
 .landing h1 {
-	font-size: 5em;
+	font-size: 4.5em;
 	color: #fff;
-	margin: -35px 0 -15px 0;
 	text-shadow: 0 0 15px rgba(0, 0, 0, .7);
 	font-weight: 900;
+	margin-bottom: 15px;
 }
 
 .landing h3 {
-	font-size: 2em;
+	font-size: 1.5em;
+	line-height: 2em;
 	color: #fff;
-	margin: 0 0 -15px 0;
 	font-weight: 300;
 	text-shadow: 0 0 15px rgba(0, 0, 0, .7);
+	margin: 0 0 0 0;
 }
 
 #learnMore {
@@ -98,7 +99,7 @@
 	border-radius: 4px;
 	padding: 15px;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin-top: 35px;
 	width: 300px;
 	transition: .5s;
@@ -111,19 +112,16 @@
 	text-shadow: none;
 }
 
-#cardCopy {
-	position: absolute;
-	top: 800px;
-	left: 0;
+.cardCopy {
 	width: 100%;
-	height: 800px;
+	height: 600px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .content {
-	width: 1200px;
+	width: 1025px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -132,110 +130,136 @@
 	text-align: center;
 }
 
-#cardCopy .content h1 {
+.cardCopy .content h1 {
 	color: #333;
 	font-family: "Lato";
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: 300;
 	opacity: 0;
 	transition: .5s;
+	margin-bottom: 35px;
 }
 
-#cardCopy .content p {
+.cardCopy .content p {
 	color: #333;
 	font-family: "Lato";
 	font-size: 1.5em;
 	font-weight: 300;
 	opacity: 0;
 	transition: .5s;
+	line-height: 1.5em;
 }
 
 #cardForm {
-	position: absolute;
-	top: 1600px;
-	left: 0;
 	width: 100%;
 	display: flex;
-	height: 1000px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-image: url("/images/marines-01-yellow.jpg");
 	background-size: cover;
+	padding: 50px 0;
 }
 
 #formWrapper {
 	display: flex;
 	flex-direction: column;
-	width: 1200px;
+	width: 1000px;
+	margin: 75px 0;
 
 }
 
 .info {
-	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Lato";
 }
 
 .info h1 {
-	font-family: "Lato";
 	font-weight: 300;
 	font-size: 3em;
 	color: #333;
-	margin: 0 0 0 0;
-	line-height: 1.2em;
+	margin-bottom: 15px;
 }
 
 .info h2 {
-	font-family: "Lato";
 	font-style: italic;
 	font-size: 3em;
-	color: #E8C162;
-	margin: 0 0 0 0;
-	background: #333;
-	padding-left: 25px;
-	width: 220px;
-	margin: 0;
+	color: #333;
+	font-weight: 900;
+	margin-bottom: 15px;
 }
 
 .info h3 {
 	color: #333;
-}
-
-.info .graphic img {
-	height: 300px;
-	margin: 0;
+	font-size: .8em;
+	margin-bottom: 25px;
 }
 
 #submitForm {
 	background: #fff;
-	padding: 50px;
-	display: flex;
-	border-top: 50px solid #333;
-}
-
-.inputLeft {
 	display: flex;
 	flex-direction: column;
-	margin-right: 50px;
+	justify-content: center;
+	align-items: center;
+	border-top: 50px solid #333;
+	padding: 75px 0;
 }
 
-.inputRight {
+#submitForm .inputRow {
+	display: flex;
+	margin-bottom: 25px;
+
+}
+
+#submitForm .inputContainer label {
+	color: rgba(0, 0, 0, .5);
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: .8em;
+	margin-bottom: 5px;
+}
+
+#submitForm .inputContainer {
 	display: flex;
 	flex-direction: column;
 }
 
 #submitForm .input {
-	width: 340px;
+	width: 250px;
 	padding: 12px 0 12px 15px;
 	border-radius: 4px;
 	border: 1px solid #ccc;
 }
 
-#submitForm select {
-	width: 360px;
+#submitForm .leftCol {
+	margin-right: 15px;
+}
+
+#submitForm .stateSelect {
+	display: flex;
+	flex-direction: column;
+}
+
+#submitForm .stateSelect select {
+	width: 550px;
+	height: 35px;
+	outline: none;
+	margin-bottom: 35px;
+}
+
+#submitForm .stateSelect label {
+	color: rgba(0, 0, 0, .5);
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: .8em;
+	margin-bottom: 5px;
 }
 
 #submitForm #submitAppBtn {
-	width: 360px;
+	width: 550px;
 	background: #FF2F63;
 	border-radius: 4px;
 	padding: 15px;
@@ -243,12 +267,14 @@
 	color: #fff;
 	font-family: "Lato";
 	font-size: 1.5em;
+	transition: .3s;
+}
+
+#submitForm #submitAppBtn:hover {
+	background: #c9244d;
 }
 
 #landingFooter {
-	position: absolute;
-	top: 2600px;
-	left: 0;
 	width: 100%;
 	background: #eee;
 	font-family: "Lato";
@@ -256,17 +282,17 @@
 }
 
 #footerWrapper {
-	width: 1200px;
-	margin: auto;
+	width: 1000px;
+	margin: 75px auto;
 	display: flex;
 }
 
 .footerItem {
-	padding: 0;
-	margin-right: 35px;
+	margin-right: 25px;
+	width: 250px;
 }
 
-.footerItem li {
+.footerItem ul {
 	display: flex;
 	flex-direction: column;
 	list-style: none;
@@ -274,6 +300,74 @@
 }
 
 .footerHeading {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 300;
+	margin-bottom: 15px;
 }
+
+.footerItem .list-item {
+	color: rgba(0, 0, 0, .8);
+	line-height: 1.5em;
+	font-size: .8em;
+}
+
+.footerItem li.copyright {
+	margin-top: 10px;
+}
+
+.footerItem .list-item a {
+	color: #333;
+}
+
+.footerItem li.email-input {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.footerItem li.email-input input {
+	padding: 8px 25px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+.footerItem li.email-input #email-submit-btn {
+	border-radius: 4px;
+	background: #E8C162;
+	color: #fff;
+	border-style: none;
+	padding: 8px 10px;
+	transition: .3s;
+}
+
+.footerItem li.email-input #email-submit-btn:hover {
+	background: #d8b45b;
+}
+
+.footerItem #partnership-button {
+	width: 250px;
+	border-radius: 4px;
+	background: #E8C162;
+	color: #fff;
+	border-style: none;
+	padding: 10px 0;
+	transition: .3s;
+	margin-bottom: 15px;
+}
+
+.footerItem #partnership-button:hover {
+	background: #d8b45b;
+}
+
+.footerItem #social-icons {
+	display: flex;
+	flex-direction: row;
+}
+
+.footerItem #social-icons li {
+	padding-right: 15px;
+}
+
+
+
+
