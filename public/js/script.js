@@ -114,28 +114,30 @@ $( document ).ready(function() {
   function validateEmail(email) {  
           if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {  
             return (true)  
-          }  
-         
-          alert("You have entered an invalid email address!")  
-            return (false)  
+          }   
   }
 
   // Invalid email alert popup
   function inValidEmailAlert() {
-    $("#emailContainer.inputContainer").toggleClass("containerError");
+    if($("#email").data("error") === false) {
+    $("#email").toggleClass("inputError");
     $("#emailContainer").append("<p id='emailAlert'>Please enter a valid email.</p>");
-
+    $("#email").data("error", true);
+    }
   }
 
   function removeInValidEmailAlert() {
     $("#emailAlert").remove();
+    $("#email").data("error", false);
+    $("#email").toggleClass("inputError");
+
+
   }
 
   // Collect values on inputs
   $("#fname").change(function() {
         fname = $("#fname").val();
         areValues();
-        console.log("Inside fname change", fname);
   });
 
   $("#lname").change(function() {
@@ -150,6 +152,11 @@ $( document ).ready(function() {
         let validEmail = validateEmail(email);
         if(validEmail === true) {
           areValues();
+          removeInValidEmailAlert();
+
+        }
+        else if (email === ""){
+          removeInValidEmailAlert();
         }
         else {
           inValidEmailAlert();
