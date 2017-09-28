@@ -239,6 +239,16 @@
 	border: 1px solid #ccc;
 }
 
+#submitform .containerError {
+	border: 1px solid red;
+}
+
+#submitform .inputRow .inputContainer p {
+	font-size: .8em;
+	font-family: sans-serif;
+	color: red;
+}
+
 #submitForm .leftCol {
 	margin-right: 15px;
 }
@@ -286,7 +296,7 @@
     color: #ccc;
 }
 
-/*#submitForm #submitAppBtn:hover {
+/*#submitForm #submitAppBtn:[disabled]:hover {
 	background: #c9244d;
 }*/
 

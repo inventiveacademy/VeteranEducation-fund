@@ -109,6 +109,28 @@ $( document ).ready(function() {
     }
   };
 
+  // Email validation
+  // Validate email
+  function validateEmail(email) {  
+          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {  
+            return (true)  
+          }  
+         
+          alert("You have entered an invalid email address!")  
+            return (false)  
+  }
+
+  // Invalid email alert popup
+  function inValidEmailAlert() {
+    $("#emailContainer.inputContainer").toggleClass("containerError");
+    $("#emailContainer").append("<p id='emailAlert'>Please enter a valid email.</p>");
+
+  }
+
+  function removeInValidEmailAlert() {
+    $("#emailAlert").remove();
+  }
+
   // Collect values on inputs
   $("#fname").change(function() {
         fname = $("#fname").val();
@@ -121,9 +143,17 @@ $( document ).ready(function() {
         areValues();
   });
 
+  
+
   $("#email").change(function() {
         email = $("#email").val();
-        areValues();
+        let validEmail = validateEmail(email);
+        if(validEmail === true) {
+          areValues();
+        }
+        else {
+          inValidEmailAlert();
+        }
   });
   
   $("#phone").change(function() {
