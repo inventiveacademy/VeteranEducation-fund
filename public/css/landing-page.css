@@ -296,7 +296,7 @@
 	border: 1px solid red !important;
 }
 
-#emailAlert {
+#inputErrorPar {
 	font-family: sans-serif;
 	font-size: .8rem;
 	color: red;

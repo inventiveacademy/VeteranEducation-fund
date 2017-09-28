@@ -109,29 +109,51 @@ $( document ).ready(function() {
     }
   };
 
+
+   // Phone validation
+  function phoneValidation(phone) {  
+    var number = /^\d{10}$/;  
+    if(phone.match(number)) {
+      return true;  
+    }  
+  }
+
+  // Invalid phone alert popup
+  function inValidPhoneAlert() {
+      if($("#phone").data("error") === false) {
+      $("#phone").toggleClass("inputError");
+      $("#phoneContainer").append("<p id='inputErrorPar'>Please enter a valid phone number.</p>");
+      $("#phone").data("error", true);
+    }
+  }
+
+  // Remove invalid phone alert
+  function removeInValidPhoneAlert() {
+    $("#inputErrorPar").remove();
+    $("#phone").data("error", false);
+    $("#phone").toggleClass("inputError");
+  }
+
   // Email validation
-  // Validate email
   function validateEmail(email) {  
-          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {  
-            return (true)  
-          }   
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) { 
+      return (true)  
+    }   
   }
 
   // Invalid email alert popup
   function inValidEmailAlert() {
     if($("#email").data("error") === false) {
     $("#email").toggleClass("inputError");
-    $("#emailContainer").append("<p id='emailAlert'>Please enter a valid email.</p>");
+    $("#emailContainer").append("<p id='inputErrorPar'>Please enter a valid email.</p>");
     $("#email").data("error", true);
     }
   }
 
   function removeInValidEmailAlert() {
-    $("#emailAlert").remove();
+    $("#inputErrorPar").remove();
     $("#email").data("error", false);
     $("#email").toggleClass("inputError");
-
-
   }
 
   // Collect values on inputs
@@ -146,14 +168,12 @@ $( document ).ready(function() {
   });
 
   
-
   $("#email").change(function() {
         email = $("#email").val();
         let validEmail = validateEmail(email);
         if(validEmail === true) {
           areValues();
           removeInValidEmailAlert();
-
         }
         else if (email === ""){
           removeInValidEmailAlert();
@@ -165,7 +185,17 @@ $( document ).ready(function() {
   
   $("#phone").change(function() {
         contactphone = $("#phone").val();
-        areValues();
+        let validPhone = phoneValidation(contactphone);
+        if (validPhone === true) {
+          areValues();
+          removeInValidPhoneAlert();
+        }
+        else if (contactphone === "") {
+          removeInValidPhoneAlert();
+        }
+        else {
+          inValidPhoneAlert();
+        }
   });
       
   $("#address").change(function() {
