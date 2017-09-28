@@ -1,3 +1,5 @@
+"use strict";
+
 $( document ).ready(function() {
 
 
@@ -85,7 +87,72 @@ $( document ).ready(function() {
 
 
 
-  // Landing Page Script
+  // Landing Page Script //
+
+  let fname;
+  let lname;
+  let email;
+  let contactphone;
+  let address;
+  let city;
+  let zip;
+  let state;
+
+  // Check for all required inputs and enable submit button
+  function areValues() {
+    if (fname && lname && email && phone && address && city && zip && state) {
+        $("#submitAppBtn").prop("disabled", false);
+    } else {
+        if (!fname || !lname || !email || !phone || !address || !city || !zip || !state) {
+            $("#submitAppBtn").prop("disabled", true);
+        }
+    }
+  };
+
+  // Collect values on inputs
+  $("#fname").change(function() {
+        fname = $("#fname").val();
+        areValues();
+        console.log("Inside fname change", fname);
+  });
+
+  $("#lname").change(function() {
+        lname = $("#lname").val();
+        areValues();
+  });
+
+  $("#email").change(function() {
+        email = $("#email").val();
+        areValues();
+  });
+  
+  $("#phone").change(function() {
+        contactphone = $("#phone").val();
+        areValues();
+  });
+      
+  $("#address").change(function() {
+        address = $("#address").val();
+        areValues();
+  });
+
+  $("#city").change(function() {
+        city = $("#city").val();
+        areValues();
+  });
+
+  $("#zip").change(function() {
+        zip = $("#zip").val();
+        areValues();
+  });
+  
+  $("#state").change(function() {
+        state = $("#state").val();
+        areValues();
+  });
+
+
+  // New Application
   function Application(fname, lname, email, phone, address, city, zip, state) {
     this.firstname = fname;
     this.lastname = lname;
@@ -98,6 +165,7 @@ $( document ).ready(function() {
     this.source = "vetEdFund";
   }
 
+  //Post new appliction
   const postApplication = function(application) {
     
     $.ajax({
@@ -114,6 +182,7 @@ $( document ).ready(function() {
 
   }
 
+  // Create new application
   $("#submitAppBtn").on("click", function(e) {
       console.log(e);
       e.preventDefault();
@@ -127,12 +196,12 @@ $( document ).ready(function() {
       let zip = $("#zip").val();
       let state = $("#state").val();
 
-      console.log(state);
       var application = new Application(fname, lname, email, phone, address, city, zip, state);
       postApplication(application);
       
   });
 
+  // Change background color of header on scroll down
   $(window).scroll(function() {
       let header = $("#landingHeader");
       let navLinks = $("#landingNav ul li a")
@@ -153,6 +222,7 @@ $( document ).ready(function() {
       }
   })
 
+  // Fade in content card on scroll down
   $(window).scroll(function() {
       let h1 = $("#copyHeading");
       let p = $("#copyPar");

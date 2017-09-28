@@ -222,6 +222,11 @@
 	margin-bottom: 5px;
 }
 
+#submitForm .inputContainer label::after {
+    content: "*";
+    color: red;
+}
+
 #submitForm .inputContainer {
 	display: flex;
 	flex-direction: column;
@@ -244,8 +249,8 @@
 }
 
 #submitForm .stateSelect select {
-	width: 550px;
-	height: 35px;
+	width: 265px;
+	height: 38px;
 	outline: none;
 	margin-bottom: 35px;
 }
@@ -256,6 +261,11 @@
 	font-style: italic;
 	font-size: .8em;
 	margin-bottom: 5px;
+}
+
+#submitForm .stateSelect label::after {
+    content: "*";
+    color: red;
 }
 
 #submitForm #submitAppBtn {
@@ -270,9 +280,15 @@
 	transition: .3s;
 }
 
-#submitForm #submitAppBtn:hover {
-	background: #c9244d;
+#submitForm #submitAppBtn:disabled {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    color: #ccc;
 }
+
+/*#submitForm #submitAppBtn:hover {
+	background: #c9244d;
+}*/
 
 #landingFooter {
 	width: 100%;
